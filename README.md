@@ -5,3 +5,6 @@
    
 ## 2.Counter_App Js
    https://surajbokde.github.io/Small_project/counter_app%20using%20JS/index.html
+
+## 3.CountDown_timer
+   https://surajbokde.github.io/Small_project/countdown_timer/
