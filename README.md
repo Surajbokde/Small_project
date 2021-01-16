@@ -8,3 +8,6 @@
 
 ## 3.CountDown_timer
    https://surajbokde.github.io/Small_project/countdown_timer/
+
+## 4.Quiz_App
+   https://surajbokde.github.io/Small_project/Quiz_App/
