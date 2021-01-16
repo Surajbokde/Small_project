@@ -101,14 +101,15 @@ check.addEventListener("click",() => {
         }
      }, 3000);
     
-    if(curr!=quiz.length){
+    if(curr<quiz.length){
     checkanswer();
     nextque();
     setTimeout(() => {  
+        
         loadquiz();
-        curr++;
+        
      }, 1000);
-    
+     curr++;
     }
 });
 
