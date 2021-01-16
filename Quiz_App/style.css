@@ -1,0 +1,61 @@
+body{
+    background-image: url(https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ);
+    background-repeat: no-repeat;
+    min-width: 100vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.container{
+    background-color: rgba(201, 201, 201, 0.685);
+    border-radius: 5px;
+    box-shadow: 0 0 10px5px rgba(0,0,0,0.1);
+    width: 600px;
+    max-width: 100%;
+    padding: 0%;
+    margin: 100px;
+}
+.quizbox{
+    padding: 10px;
+}
+label{ 
+    display: block;
+    padding: 0 0 5px 0;
+ }
+.quizbox ul{
+    text-decoration: none;
+    list-style-type:none;
+    
+}
+
+h2{
+    display: flex;
+}
+.quizbox ul li{
+    display: flex;
+    padding: 2px;
+    font-size: 1.3rem;
+    margin-left: -15px;
+}
+
+.quizbox ul li input[type=radio] {
+    height: 1.4em;
+    width: 25px;
+    margin-right: 2px;
+    
+}
+
+button{
+    color: snow;
+    width: 100%;
+    padding: 1.3rem;
+    height: 6vh;
+    padding: 0px;
+    border-radius: 5px;
+    background-color: rgb(77, 77, 243);
+    font-size: 1.3rem;
+    font-weight: 600;
+    
+}
