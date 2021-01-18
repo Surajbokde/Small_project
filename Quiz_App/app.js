@@ -25,6 +25,7 @@ const quiz=[
     }
 ]
 
+let score=0;
 const check=document.getElementById("submit");
 const a=document.getElementById("a_option");
 const b=document.getElementById("b_option");
@@ -33,13 +34,10 @@ const d=document.getElementById("d_option");
 
 const que=document.getElementById("question");
 let curr=0;
+
+
 function loadquiz(){
-    var text1 = document.getElementById("text1");
-    var text2 = document.getElementById("text2");
-    var text3 = document.getElementById("text3");
-    text1.style.display = "block";
-    text2.style.display = "none";
-    text3.style.display = "none";
+    
     const currentquiz=quiz[curr];
     a.innerHTML=currentquiz.a;
     b.innerHTML=currentquiz.b;
@@ -69,19 +67,19 @@ function checkanswer(){
         youroption="d";
         
     }
-    var text1 = document.getElementById("text1");
-    var text2 = document.getElementById("text2");
-    var text3 = document.getElementById("text3");
+    
     if(youroption==correctans){
-        text2.style.display = "block";
-        text1.style.display = "none";
+        score++;
+        console.log(score);
     }
-    else{
-        text3.style.display = "block";
-        text1.style.display = "none";
-    }
+    // else{
+    //     text3.style.display = "block";
+    //     text1.style.display = "none";
+    // }
 }
-loadquiz();
+
+
+
 function nextque(){
     
     document.getElementById("a").checked=false;
@@ -90,26 +88,32 @@ function nextque(){
     document.getElementById("d").checked=false;
     
 }
-
+let flag=0;
 check.addEventListener("click",() => {
-    const currentquiz=quiz[curr];
-    
-    setTimeout(() => {  
-        if(curr==quiz.length){
-            alert("QuizOver");
-            curr=0;
-        }
-     }, 3000);
-    
-    if(curr<quiz.length){
-    checkanswer();
-    nextque();
-    setTimeout(() => {  
-        
-        loadquiz();
-        
-     }, 1000);
-     curr++;
+    if(flag==1){
+        flag=0;
+        location.reload();
+
     }
+    checkanswer();
+    curr++;
+    if(curr==quiz.length){
+    
+        document.getElementById("displayquiz").style.display="none";
+        document.getElementById("question").innerHTML="<h3>Your score is :"+ score+"/"+quiz.length+"</h3>";
+        document.getElementById("submit").innerHTML="Start Again";
+        curr=0;
+        flag=1;
+        
+    }else{
+        nextque();
+        loadquiz();
+    }
+
+    
+   
+    
+    
 });
 
+loadquiz();
